@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cac287e2-0f90-437b-840d-b36859ba4930" name="Changes" comment="Implementando o metodo getNo e get">
+    <list default="true" id="cac287e2-0f90-437b-840d-b36859ba4930" name="Changes" comment="Implementando o metodo add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/estudos/lista/ListaDuplamenteEncadeada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/estudos/lista/ListaDuplamenteEncadeada.java" afterDir="false" />
     </list>
@@ -77,13 +77,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679060475338</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implementando o metodo add">
+      <created>1679061305220</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679061305220</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="Implementando o metodo size" />
     <MESSAGE value="Implementando o metodo getNo e get" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementando o metodo getNo e get" />
+    <MESSAGE value="Implementando o metodo add" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementando o metodo add" />
   </component>
 </project>

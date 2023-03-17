@@ -7,25 +7,25 @@ public class ListaDuplamenteEncadeada<T> {
 
     private int tamanhoLista;
 
-    public ListaDuplamenteEncadeada(){
+    public ListaDuplamenteEncadeada() {
         this.primeiroNo = null;
         this.ultimoNo = null;
         this.tamanhoLista = 0;
     }
 
-    public T get(int index){
+    public T get(int index) {
         return this.getNo(index).getConteudo();
     }
 
-    public void add(T elemento){
+    public void add(T elemento) {
         NoDuplo<T> novoNo = new NoDuplo<>(elemento);
         novoNo.setNoProximo(null);
         novoNo.setNoPrevio(ultimoNo);
 
-        if(primeiroNo == null){
+        if (primeiroNo == null) {
             primeiroNo = novoNo;
         }
-        if(ultimoNo != null){
+        if (ultimoNo != null) {
             ultimoNo.setNoProximo(novoNo);
         }
         ultimoNo = novoNo;
@@ -33,17 +33,39 @@ public class ListaDuplamenteEncadeada<T> {
         tamanhoLista++;
     }
 
-    private NoDuplo<T> getNo(int index){
+    public void add(int index, T elemento) {
+        NoDuplo<T> noAuxiliar = getNo(index);
+        NoDuplo<T> novoNo = new NoDuplo<>(elemento);
+        novoNo.setNoProximo(noAuxiliar);
+
+        if (novoNo.getNoProximo() != null) {
+            novoNo.setNoPrevio(noAuxiliar.getNoPrevio());
+            novoNo.getNoProximo().setNoPrevio(novoNo);
+        } else {
+            novoNo.setNoPrevio(ultimoNo);
+            ultimoNo = novoNo;
+        }
+
+        if (index == 0) {
+            primeiroNo = novoNo;
+        } else {
+            novoNo.getNoPrevio().setNoProximo(novoNo);
+        }
+
+        tamanhoLista++;
+    }
+
+    private NoDuplo<T> getNo(int index) {
         NoDuplo<T> noAuxiliar = primeiroNo; //corre os nós da estrutuda de dados e começa pelo primeiro nó
 
-        for(int i = 0; (i < index) && (noAuxiliar != null); i++){
+        for (int i = 0; (i < index) && (noAuxiliar != null); i++) {
             noAuxiliar = noAuxiliar.getNoProximo();
         }
 
         return noAuxiliar;
     }
 
-    public int size(){
+    public int size() {
         return tamanhoLista;
     }
 }
