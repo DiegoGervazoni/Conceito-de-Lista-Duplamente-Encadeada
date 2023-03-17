@@ -17,6 +17,22 @@ public class ListaDuplamenteEncadeada<T> {
         return this.getNo(index).getConteudo();
     }
 
+    public void add(T elemento){
+        NoDuplo<T> novoNo = new NoDuplo<>(elemento);
+        novoNo.setNoProximo(null);
+        novoNo.setNoPrevio(ultimoNo);
+
+        if(primeiroNo == null){
+            primeiroNo = novoNo;
+        }
+        if(ultimoNo != null){
+            ultimoNo.setNoProximo(novoNo);
+        }
+        ultimoNo = novoNo;
+
+        tamanhoLista++;
+    }
+
     private NoDuplo<T> getNo(int index){
         NoDuplo<T> noAuxiliar = primeiroNo; //corre os nós da estrutuda de dados e começa pelo primeiro nó
 
