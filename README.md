@@ -7,3 +7,4 @@ Conceito de lista duplamente encadeada em Java
 - Implementação do metodo add(index);
 - Implementação do metodo remove;
 - Implementação do metodo toString;
+- Utilização da classe ListaDuplamenteEncadeada.
