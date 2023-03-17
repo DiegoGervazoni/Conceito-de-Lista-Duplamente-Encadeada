@@ -5,3 +5,4 @@ Conceito de lista duplamente encadeada em Java
 - Implementação do metodo getNo e get;
 - Implementação do metodo add;
 - Implementação do metodo add(index);
+- Implementação do metodo remove;
