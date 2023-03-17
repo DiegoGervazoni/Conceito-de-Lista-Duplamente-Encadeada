@@ -6,3 +6,4 @@ Conceito de lista duplamente encadeada em Java
 - Implementação do metodo add;
 - Implementação do metodo add(index);
 - Implementação do metodo remove;
+- Implementação do metodo toString;
